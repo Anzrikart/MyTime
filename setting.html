@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">School Time</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Timetable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="school.html">Subjects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="setting.html">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Settings</h2>
+        <form id="settingsForm">
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="sraolStart" class="form-label">SRAOL Start Time</label>
+                    <input type="time" class="form-control" id="sraolStart" required>
+                </div>
+                <div class="col">
+                    <label for="sraolEnd" class="form-label">SRAOL End Time</label>
+                    <input type="time" class="form-control" id="sraolEnd" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="skolStart" class="form-label">SKOL Start Time</label>
+                    <input type="time" class="form-control" id="skolStart" required>
+                </div>
+                <div class="col">
+                    <label for="skolEnd" class="form-label">SKOL End Time</label>
+                    <input type="time" class="form-control" id="skolEnd" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="fixedEvents" class="form-label">Fixed Events (comma separated)</label>
+                <input type="text" class="form-control" id="fixedEvents" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('settingsForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const config = {
+                time_slots: {
+                    SRAOL: {
+                        start: document.getElementById('sraolStart').value,
+                        end: document.getElementById('sraolEnd').value
+                    },
+                    SKOL: {
+                        start: document.getElementById('skolStart').value,
+                        end: document.getElementById('skolEnd').value
+                    }
+                },
+                fixed_events: document.getElementById('fixedEvents').value.split(',').map(event => event.trim())
+            };
+            const yamlText = jsyaml.dump(config);
+            await fetch('config.yml', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/x-yaml'
+                },
+                body: yamlText
+            });
+            alert('Settings saved successfully!');
+        });
+
+        async function loadSettings() {
+            const response = await fetch('config.yml');
+            const yamlText = await response.text();
+            const config = jsyaml.load(yamlText);
+            document.getElementById('sraolStart').value = config.time_slots.SRAOL.start;
+            document.getElementById('sraolEnd').value = config.time_slots.SRAOL.end;
+            document.getElementById('skolStart').value = config.time_slots.SKOL.start;
+            document.getElementById('skolEnd').value = config.time_slots.SKOL.end;
+            document.getElementById('fixedEvents').value = config.fixed_events.join(', ');
+        }
+
+        loadSettings();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

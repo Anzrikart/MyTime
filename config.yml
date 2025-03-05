@@ -1,0 +1,11 @@
+time_slots:
+  SRAOL:
+    start: "8:00 am"
+    end: "11:05 am"
+  SKOL:
+    start: "12:50 pm"
+    end: "6:10 pm"
+fixed_events:
+  - "R U M A H"
+  - "R E H A T"
+  - "T A S K A"
