@@ -1,0 +1,260 @@
+{
+  "SRAOL": [
+    {
+      "subject": "AL QURAN",
+      "teacher": "Hajar",
+      "code": "AL QURAN",
+      "color": "#FF0000"
+    },
+    {
+      "subject": "AKHLAK",
+      "teacher": "Hajar",
+      "code": "AKHLAK",
+      "color": "#0000FF"
+    },
+    {
+      "subject": "HAFAZAN",
+      "teacher": "Aliah",
+      "code": "HAFAZAN",
+      "color": "#008000"
+    },
+    {
+      "subject": "IMLAK",
+      "teacher": "Hajar",
+      "code": "IMLAK",
+      "color": "#FFFF00"
+    },
+    {
+      "subject": "TAJWID",
+      "teacher": "Sayidatul",
+      "code": "TAJWID",
+      "color": "#800080"
+    },
+    {
+      "subject": "TAUHID",
+      "teacher": "Farahin",
+      "code": "TAUHID",
+      "color": "#FFA500"
+    },
+    {
+      "subject": "FEQAH",
+      "teacher": "Farahin",
+      "code": "FEQAH",
+      "color": "#FFC0CB"
+    },
+    {
+      "subject": "B.ARAB",
+      "teacher": "Aliah",
+      "code": "B.ARAB",
+      "color": "#A52A2A"
+    },
+    {
+      "subject": "KHAT",
+      "teacher": "Farahin",
+      "code": "KHAT",
+      "color": "#808080"
+    },
+    {
+      "subject": "JAWI",
+      "teacher": "Sayidatul",
+      "code": "JAWI",
+      "color": "#000000"
+    },
+    {
+      "subject": "SIRAH",
+      "teacher": "Hajar",
+      "code": "SIRAH",
+      "color": "#FFFFFF"
+    },
+    {
+      "subject": "AMALI",
+      "teacher": "SOLAT DHUHA",
+      "code": "AMALI",
+      "color": "#00FFFF"
+    },
+    {
+      "subject": "PERHIMPUNAN",
+      "teacher": "",
+      "code": "PERHIMPUNAN",
+      "color": "#FF00FF"
+    }
+  ],
+  "SKOL": [
+    {
+      "code": "CP",
+      "subject": "Cakna Petang",
+      "teacher": "",
+      "color": "#FF0000"
+    },
+    {
+      "code": "BA",
+      "subject": "Bahasa Arab",
+      "teacher": "Redzuan",
+      "color": "#0000FF"
+    },
+    {
+      "code": "BI",
+      "subject": "Bahasa Inggeris",
+      "teacher": "Isaac",
+      "color": "#008000"
+    },
+    {
+      "code": "BM",
+      "subject": "Bahasa Melayu",
+      "teacher": "Hasbullah",
+      "color": "#FFFF00"
+    },
+    {
+      "code": "Mt",
+      "subject": "Matematik",
+      "teacher": "Hisham",
+      "color": "#800080"
+    },
+    {
+      "code": "PMz",
+      "subject": "Pendidikan Muzik",
+      "teacher": "Fazmrirul",
+      "color": "#FFA500"
+    },
+    {
+      "code": "PSV",
+      "subject": "Pendidikan Seni Visual",
+      "teacher": "Hasbullah",
+      "color": "#FFC0CB"
+    },
+    {
+      "code": "PI(AQ)",
+      "subject": "Pendidikan Islam (Al-Quran)",
+      "teacher": "Dareen, Nursaadah",
+      "color": "#A52A2A"
+    },
+    {
+      "code": "PI(U)",
+      "subject": "Pendidikan Islam (Ulum)",
+      "teacher": "Dareen",
+      "color": "#808080"
+    },
+    {
+      "code": "PI(J)",
+      "subject": "Pendidikan Islam (Jawi)",
+      "teacher": "Dareen",
+      "color": "#000000"
+    },
+    {
+      "code": "PJ",
+      "subject": "Pendidikan Jasmani Kesihatan",
+      "teacher": "Isaac",
+      "color": "#FFFFFF"
+    },
+    {
+      "code": "P",
+      "subject": "Perhimpunan",
+      "teacher": "Hasbullah",
+      "color": "#00FFFF"
+    },
+    {
+      "code": "Sn",
+      "subject": "Sains",
+      "teacher": "Sarminah",
+      "color": "#FF00FF"
+    },
+    {
+      "code": "Tas",
+      "subject": "Tasmik",
+      "teacher": "Dareen, Nursaadah, Fuziah",
+      "color": "#FF0000"
+    },
+    {
+      "code": "SZ",
+      "subject": "Solat Zohor",
+      "teacher": "",
+      "color": "#0000FF"
+    },
+    {
+      "code": "PK",
+      "subject": "Pendidikan Jasmani Kesihatan",
+      "teacher": "Isaac",
+      "color": "#008000"
+    }
+  ],
+  "SRAISM": [
+    {
+      "subject": "AL QURAN",
+      "teacher": "Hajar",
+      "code": "AL QURAN",
+      "color": "#FF0000"
+    },
+    {
+      "subject": "AKHLAK",
+      "teacher": "Hajar",
+      "code": "AKHLAK",
+      "color": "#0000FF"
+    },
+    {
+      "subject": "HAFAZAN",
+      "teacher": "Aliah",
+      "code": "HAFAZAN",
+      "color": "#008000"
+    },
+    {
+      "subject": "IMLAK",
+      "teacher": "Hajar",
+      "code": "IMLAK",
+      "color": "#FFFF00"
+    },
+    {
+      "subject": "TAJWID",
+      "teacher": "Sayidatul",
+      "code": "TAJWID",
+      "color": "#800080"
+    },
+    {
+      "subject": "TAUHID",
+      "teacher": "Farahin",
+      "code": "TAUHID",
+      "color": "#FFA500"
+    },
+    {
+      "subject": "FEQAH",
+      "teacher": "Farahin",
+      "code": "FEQAH",
+      "color": "#FFC0CB"
+    },
+    {
+      "subject": "B.ARAB",
+      "teacher": "Aliah",
+      "code": "B.ARAB",
+      "color": "#A52A2A"
+    },
+    {
+      "subject": "KHAT",
+      "teacher": "Farahin",
+      "code": "KHAT",
+      "color": "#808080"
+    },
+    {
+      "subject": "JAWI",
+      "teacher": "Sayidatul",
+      "code": "JAWI",
+      "color": "#000000"
+    },
+    {
+      "subject": "SIRAH",
+      "teacher": "Hajar",
+      "code": "SIRAH",
+      "color": "#FFFFFF"
+    },
+    {
+      "subject": "AMALI",
+      "teacher": "SOLAT DHUHA",
+      "code": "AMALI",
+      "color": "#00FFFF"
+    },
+    {
+      "subject": "PERHIMPUNAN",
+      "teacher": "",
+      "code": "PERHIMPUNAN",
+      "color": "#FF00FF"
+    }
+  ]
+}

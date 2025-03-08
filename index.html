@@ -3,106 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Optimized Timetable</title>
+    <title>View Timetable</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
-    <style>
-        .sraol { background-color: #d1e7dd; } /* Light green */
-        .skol { background-color: #cfe2ff; } /* Light blue */
-        .fixed { background-color: #f8d7da; } /* Light red */
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/assets/js/color.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">School Time</a>
+            <a class="navbar-brand" href="/">School Timetable</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Timetable</a>
+                        <a class="nav-link" href="/index.html">Timetable</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="school.html">Subjects</a>
+                        <a class="nav-link" href="/pages/school.html">Subjects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="setting.html">Settings</a>
+                        <a class="nav-link" href="/pages/setting.html">Settings</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Optimized Weekly Timetable</h2>
+        <h2 class="text-center mb-4">Timetable</h2>
         <div class="text-center mb-3">
-            <button class="btn btn-primary" onclick="filterTimetable('SRAOL')">SRAOL</button>
-            <button class="btn btn-secondary" onclick="filterTimetable('SKOL')">SKOL</button>
-            <button class="btn btn-info" onclick="loadTimetable()">Show All</button>
+            <select id="schoolSelect" class="form-select" aria-label="Select School">
+                <option value="SRAOL">SRAOL</option>
+                <option value="SKOL">SKOL</option>
+                <option value="SRAISM">SRAISM</option>
+            </select>
         </div>
         <div class="table-responsive">
-            <table class="table table-bordered text-center table-hover" id="timetable">
+            <table class="table table-bordered text-center table-hover" id="timetableTable">
                 <thead class="table-dark">
                     <tr>
-                        <th>Mula</th>
-                        <th>Tamat</th>
-                        <th>Isnin</th>
-                        <th>Selasa</th>
-                        <th>Rabu</th>
-                        <th>Khamis</th>
-                        <th>Jumaat</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
         </div>
     </div>
-    <script>
-        let timetableData = [];
-        let config = {};
-
-        async function loadConfig() {
-            const response = await fetch('config.yml');
-            const yamlText = await response.text();
-            config = jsyaml.load(yamlText);
-        }
-
-        async function loadTimetable() {
-            await loadConfig();
-            const response = await fetch('timetable.json');
-            const data = await response.json();
-            timetableData = data.timetable;
-            displayTimetable(timetableData);
-        }
-
-        function displayTimetable(data) {
-            const tbody = document.querySelector("#timetable tbody");
-            tbody.innerHTML = "";
-            data.forEach(row => {
-                const tr = document.createElement("tr");
-                tr.classList.add(row.type === "fixed" ? "fixed" : row.type === "SRAOL" ? "sraol" : "skol");
-                Object.values(row).forEach(cell => {
-                    const td = document.createElement("td");
-                    td.textContent = cell;
-                    tr.appendChild(td);
-                });
-                tbody.appendChild(tr);
-            });
-        }
-
-        function filterTimetable(type) {
-            const timeRange = config.time_slots[type];
-            const filteredData = timetableData.filter(row => 
-                (row.start >= timeRange.start && row.end <= timeRange.end) || config.fixed_events.includes(row.ISNIN)
-            );
-            displayTimetable(filteredData);
-        }
-
-        loadTimetable();
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <p>&copy; 2023 School Timetable. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('schoolSelect').addEventListener('change', loadTimetable);
+        loadTimetable(); // Load default timetable on page load
+    });
+
+    let subjectColors = {};
+
+    async function loadTimetable() {
+        subjectColors = {}; // Reset subject colors
+        await loadSubjectColors();
+        const school = document.getElementById('schoolSelect').value;
+        try {
+            const response = await fetch('/assets/config/timetable.json');
+            if (!response.ok) throw new Error('Failed to load timetable');
+            const data = await response.json();
+            displayTimetable(data[school]);
+        } catch (error) {
+            console.error('Error loading timetable:', error);
+        }
+    }
+
+    function displayTimetable(timetable) {
+        const tbody = document.querySelector("#timetableTable tbody");
+        tbody.innerHTML = "";
+        timetable.forEach(row => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${row.start}</td>
+                <td>${row.end}</td>
+                <td style="background-color: ${subjectColors[row.monday] || '#FFFFFF'}; color: ${getTextColor(subjectColors[row.monday])}">${row.monday || '-'}</td>
+                <td style="background-color: ${subjectColors[row.tuesday] || '#FFFFFF'}; color: ${getTextColor(subjectColors[row.tuesday])}">${row.tuesday || '-'}</td>
+                <td style="background-color: ${subjectColors[row.wednesday] || '#FFFFFF'}; color: ${getTextColor(subjectColors[row.wednesday])}">${row.wednesday || '-'}</td>
+                <td style="background-color: ${subjectColors[row.thursday] || '#FFFFFF'}; color: ${getTextColor(subjectColors[row.thursday])}">${row.thursday || '-'}</td>
+                <td style="background-color: ${subjectColors[row.friday] || '#FFFFFF'}; color: ${getTextColor(subjectColors[row.friday])}">${row.friday || '-'}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function getTextColor(backgroundColor) {
+        if (!backgroundColor) return '#000000'; // Default to black if no background color
+        const color = backgroundColor.substring(1); // Remove the '#' character
+        const rgb = parseInt(color, 16); // Convert hex to integer
+        const r = (rgb >> 16) & 0xff;
+        const g = (rgb >> 8) & 0xff;
+        const b = (rgb >> 0) & 0xff;
+        const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // Calculate luma
+        return luma < 140 ? '#FFFFFF' : '#000000'; // Return white for dark colors, black for light colors
+    }
+</script>
 </html>

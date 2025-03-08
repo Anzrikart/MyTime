@@ -1,9 +1,0 @@
-{
-  "timetable": [
-    { "start": "6:00 am", "end": "6:45 am", "ISNIN": "R", "SELASA": "U", "RABU": "M", "KHAMIS": "A", "JUMAAT": "H", "type": "fixed" },
-    { "start": "6:45 am", "end": "7:30 am", "ISNIN": "VAN-RASYID", "SELASA": "VAN-RASYID", "RABU": "VAN-RASYID", "KHAMIS": "VAN-RASYID", "JUMAAT": "VAN-RASYID", "type": "fixed" },
-    { "start": "8:00 am", "end": "8:30 am", "ISNIN": "PERHIMPUNAN", "SELASA": "AL QURAN", "RABU": "AL QURAN", "KHAMIS": "AL QURAN", "JUMAAT": "B.ARAB", "type": "SRAOL" },
-    { "start": "12:50 pm", "end": "1:15 pm", "ISNIN": "BM", "SELASA": "CP", "RABU": "CP", "KHAMIS": "CP", "JUMAAT": "VAN-RASYID", "type": "SKOL" },
-    { "start": "5:40 pm", "end": "6:10 pm", "ISNIN": "P", "SELASA": "BM", "RABU": "BI", "KHAMIS": "PJ", "JUMAAT": "PI(J)", "type": "SKOL" }
-  ]
-}

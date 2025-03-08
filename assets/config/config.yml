@@ -1,0 +1,73 @@
+time_slots:
+  SRAOL:
+    start: "6:00 am"
+    end: "12:00 pm"
+  SKOL:
+    start: "12:20 pm"
+    end: "7:00 pm"
+  SRAISM:
+    start: "5:30 am"
+    end: "5:30 pm"
+
+type:
+  - "VAN-MATAHARI"
+  - "VAN-RASYID"
+  - "solat"
+  - "Taska"
+  - "New Activity"
+
+subjects:
+  SRAOL:
+    - code: "AL QURAN"
+      subject: "AL QURAN"
+      teacher: "Hajar"
+      color: "#FF0000" # Red
+    - code: "AKHLAK"
+      subject: "AKHLAK"
+      teacher: "Hajar"
+      color: "#0000FF" # Blue
+  SKOL:
+    - code: "CP"
+      subject: "Cakna Petang"
+      teacher: ""
+      color: "#FF0000" # Red
+    - code: "BA"
+      subject: "Bahasa Arab"
+      teacher: "Redzuan"
+      color: "#0000FF" # Blue
+  SRAISM:
+    - code: "AT"
+      subject: "Asas Tilawah"
+      teacher: "C.Emaliadzura"
+      color: "#FF0000" # Red
+    - code: "AK"
+      subject: "Akhlak"
+      teacher: "U. Siti Norhanaa"
+      color: "#0000FF" # Blue
+
+school:
+  - SRAOL
+  - SKOL
+  - SRAISM
+
+class:
+  - 3JM
+  - 3UUM
+  - 1AlBiruni
+
+user_role:
+  - parent
+  - student
+
+student:
+  - Syahmi
+  - Ariq Auni
+  - Lutfi
+
+html:
+  title: "My Table Configuration"
+  header: "Welcome to My Table"
+  footer: "© 2023 My Table. All rights reserved."
+  theme:
+    color: "blue"
+    font: "Arial"

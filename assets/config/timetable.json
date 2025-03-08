@@ -1,0 +1,53 @@
+{
+  "SRAISM": [
+    { "start": "5:30 am", "end": "6:20 am", "monday": "R", "tuesday": "U", "wednesday": "M", "thursday": "A", "friday": "H"},
+    { "start": "6:20 am", "end": "7:30 am", "monday": "VAN-MATAHARI", "tuesday": "VAN-MATAHARI", "wednesday": "VAN-MATAHARI", "thursday": "VAN-MATAHARI", "friday": "VAN-MATAHARI"},
+    { "start": "7:30 am", "end": "8:00 am", "monday": "AT", "tuesday": "AT", "wednesday": "AT", "thursday": "AT", "friday": "AT"},
+    { "start": "8:00 am", "end": "8:30 am", "monday": "AT", "tuesday": "PJ", "wednesday": "SN", "thursday": "PJ", "friday": "AT"},
+    { "start": "8:30 am", "end": "9:00 am", "monday": "MT", "tuesday": "BM", "wednesday": "PIM", "thursday": "SN", "friday": "PK"},
+    { "start": "9:00 am", "end": "9:30 am", "monday": "FQ", "tuesday": "BM", "wednesday": "BM", "thursday": "PIM", "friday": "AK"},
+    { "start": "9:30 am", "end": "10:00 am", "monday": "D", "tuesday": "H", "wednesday": "U", "thursday": "H", "friday": "A"},
+    { "start": "10:00 am", "end": "10:30 am", "monday": "JW", "tuesday": "MT", "wednesday": "FQ", "thursday": "BI", "friday": "BM"},
+    { "start": "10:30 am", "end": "11:00 am", "monday": "JW", "tuesday": "MS", "wednesday": "BAS", "thursday": "BI", "friday": "BM"},
+    { "start": "11:00 am", "end": "11:30 am", "monday": "SN", "tuesday": "MS", "wednesday": "MT", "thursday": "MT", "friday": "BAJ"},
+    { "start": "11:30 am", "end": "12:00 pm", "monday": "BM", "tuesday": "FQ", "wednesday": "MT", "thursday": "MT", "friday": "JW" },
+    { "start": "12:00 pm", "end": "12:30 pm", "monday": "BM", "tuesday": "JW", "wednesday": "HF", "thursday": "BM", "friday": "VAN-MATAHARI"},
+    { "start": "12:30 pm", "end": "1:00 pm", "monday": "BI", "tuesday": "HF", "wednesday": "BI", "thursday": "BI", "friday": ""},
+    { "start": "1:00 pm", "end": "1:30 pm", "monday": "AK", "tuesday": "BI", "wednesday": "BI", "thursday": "JW", "friday": ""},
+    { "start": "1:30 pm", "end": "2:00 pm", "monday": "Z", "tuesday": "U", "wednesday": "H", "thursday": "U", "friday": "RR"},
+    { "start": "2:00 pm", "end": "2:30 pm", "monday": "TA", "tuesday": "TA", "wednesday": "BAJ", "thursday": "BI", "friday": ""},
+    { "start": "2:30 pm", "end": "3:00 pm", "monday": "VAN-MATAHARI", "tuesday": "VAN-MATAHARI", "wednesday": "VAN-MATAHARI", "thursday": "VAN-MATAHARI", "friday": ""},
+    { "start": "3:00 pm", "end": "5:00 pm", "monday": "T", "tuesday": "A", "wednesday": "S", "thursday": "K", "friday": "A"},
+    { "start": "5:00 pm", "end": "5:30 pm", "monday": "New Activity", "tuesday": "New Activity", "wednesday": "New Activity", "thursday": "New Activity", "friday": "New Activity"}
+  ],
+  "SRAOL": [
+    { "start": "6:00 am", "end": "6:45 am", "monday": "R", "tuesday": "U", "wednesday": "M", "thursday": "A", "friday": "H" },
+    { "start": "6:45 am", "end": "7:30 am", "monday": "VAN-RASYID", "tuesday": "VAN-RASYID", "wednesday": "VAN-RASYID", "thursday": "VAN-RASYID", "friday": "VAN-RASYID" },
+    { "start": "8:00 am", "end": "8:30 am", "monday": "PERHIMPUNAN", "tuesday": "AL QURAN", "wednesday": "AL QURAN", "thursday": "AL QURAN", "friday": "B.ARAB" },
+    { "start": "8:30 am", "end": "9:00 am", "monday": "AL QURAN", "tuesday": "IMLAK", "wednesday": "TAUHID", "thursday": "B.ARAB", "friday": "JAWI" },
+    { "start": "9:00 am", "end": "9:30 am", "monday": "AKHLAK", "tuesday": "HAFAZAN", "wednesday": "TAUHID", "thursday": "B.ARAB", "friday": "JAWI" },
+    { "start": "9:30 am", "end": "10:00 am", "monday": "AKHLAK", "tuesday": "TAJWID", "wednesday": "FEQAH", "thursday": "HAFAZAN", "friday": "SIRAH" },
+    { "start": "10:00 am", "end": "10:20 am", "monday": "R", "tuesday": "E", "wednesday": "H", "thursday": "A", "friday": "T" },
+    { "start": "10:20 am", "end": "10:50 am", "monday": "HAFAZAN", "tuesday": "TAJWID", "wednesday": "FEQAH", "thursday": "KHAT", "friday": "SIRAH" },
+    { "start": "10:50 am", "end": "11:05 am", "monday": "AMALI", "tuesday": "AMALI", "wednesday": "AMALI", "thursday": "AMALI", "friday": "AMALI" },
+    { "start": "11:05 am", "end": "11:30 am", "monday": "VAN-RASYID", "tuesday": "VAN-RASYID", "wednesday": "VAN-RASYID", "thursday": "VAN-RASYID", "friday": "VAN-RASYID" },
+    { "start": "11:30 am", "end": "12:00 pm", "monday": "New Activity", "tuesday": "New Activity", "wednesday": "New Activity", "thursday": "New Activity", "friday": "New Activity" }
+  ],
+  "SKOL": [
+    { "start": "12:20 pm", "end": "12:50 pm", "monday": "VAN-RASYID", "tuesday": "VAN-RASYID", "wednesday": "VAN-RASYID", "thursday": "VAN-RASYID", "friday": "" },
+    { "start": "12:50 pm", "end": "1:15 pm", "monday": "BM", "tuesday": "CP", "wednesday": "CP", "thursday": "CP", "friday": "VAN-RASYID" },
+    { "start": "1:15 pm", "end": "1:40 pm", "monday": "BM", "tuesday": "Tas", "wednesday": "BA", "thursday": "BI", "friday": "SOLAT" },
+    { "start": "1:40 pm", "end": "2:05 pm", "monday": "PSV", "tuesday": "PI(U)", "wednesday": "BA", "thursday": "BI", "friday": "friday" },
+    { "start": "2:05 pm", "end": "2:20 pm", "monday": "PSV", "tuesday": "PI(U)", "wednesday": "BA", "thursday": "PMz", "friday": "Masjid Nurul Huda" },
+    { "start": "2:20 pm", "end": "2:50 pm", "monday": "SZ", "tuesday": "SZ", "wednesday": "SZ", "thursday": "SZ", "friday": "Mt" },
+    { "start": "2:50 pm", "end": "3:10 pm", "monday": "R", "tuesday": "E", "wednesday": "H", "thursday": "A", "friday": "T" },
+    { "start": "3:10 pm", "end": "3:40 pm", "monday": "Mt", "tuesday": "BI", "wednesday": "BM", "thursday": "PK", "friday": "Mt" },
+    { "start": "3:40 pm", "end": "4:10 pm", "monday": "Mt", "tuesday": "BI", "wednesday": "BM", "thursday": "Tas", "friday": "Mt" },
+    { "start": "4:10 pm", "end": "4:40 pm", "monday": "Sn", "tuesday": "BI", "wednesday": "BM", "thursday": "PI(AQ)", "friday": "BM" },
+    { "start": "4:40 pm", "end": "5:10 pm", "monday": "Sn", "tuesday": "PJ", "wednesday": "BI", "thursday": "PI(AQ)", "friday": "BM" },
+    { "start": "5:10 pm", "end": "5:40 pm", "monday": "Sn", "tuesday": "BM", "wednesday": "BI", "thursday": "PI(AQ)", "friday": "BM" },
+    { "start": "5:40 pm", "end": "6:10 pm", "monday": "P", "tuesday": "BM", "wednesday": "BI", "thursday": "PJ", "friday": "PI(J)" },
+    { "start": "6:10 pm", "end": "6:30 pm", "monday": "VAN-RASYID", "tuesday": "VAN-RASYID", "wednesday": "VAN-RASYID", "thursday": "VAN-RASYID", "friday": "VAN-RASYID" },
+    { "start": "6:30 pm", "end": "7:00 pm", "monday": "New Activity", "tuesday": "New Activity", "wednesday": "New Activity", "thursday": "New Activity", "friday": "New Activity" }
+  ]
+}

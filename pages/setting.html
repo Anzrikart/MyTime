@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Settings</title>
+    <title id="pageTitle">Settings</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
+    <link href="/assets/css/mytable.css" rel="stylesheet">
 </head>
 <body>
+    <header id="pageHeader">
+        <!-- Header content will be inserted here dynamically -->
+    </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">School Time</a>
+            <a class="navbar-brand" href="/">School Time</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Timetable</a>
+                        <a class="nav-link" href="/index.html">Timetable</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="school.html">Subjects</a>
+                        <a class="nav-link" href="/pages/school.html">Subjects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="setting.html">Settings</a>
+                        <a class="nav-link active" href="/pages/setting.html">Settings</a>
                     </li>
                 </ul>
             </div>
@@ -59,6 +62,9 @@
             <button type="submit" class="btn btn-primary">Save Settings</button>
         </form>
     </div>
+    <footer id="pageFooter" class="text-center mt-5">
+        <!-- Footer content will be inserted here dynamically -->
+    </footer>
     <script>
         document.getElementById('settingsForm').addEventListener('submit', async function(event) {
             event.preventDefault();
@@ -95,12 +101,17 @@
             document.getElementById('skolStart').value = config.time_slots.SKOL.start;
             document.getElementById('skolEnd').value = config.time_slots.SKOL.end;
             document.getElementById('fixedEvents').value = config.fixed_events.join(', ');
+
+            // Update header, footer, and title
+            document.getElementById('pageHeader').innerHTML = config.header;
+            document.getElementById('pageFooter').innerHTML = config.footer;
+            document.getElementById('pageTitle').textContent = config.title;
         }
 
         loadSettings();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
+    <script src="/assets/js/timetableManager.js" async></script>
 </body>
 </html>
