@@ -1,0 +1,294 @@
+/* Main Styles */
+
+/* Layout */
+body {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    min-height: 100vh;
+    padding: var(--spacing-lg);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-2xl);
+}
+
+/* Header */
+.header {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.header__title {
+    text-align: center;
+    color: #1C1C1C;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters */
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: var(--radius-lg);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group__label {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: #1C1C1C;
+    font-size: 0.95rem;
+}
+
+.filter-group__select {
+    padding: 12px 15px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    background: var(--color-white);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.filter-group__select:hover {
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.filter-group__select:focus {
+    outline: none;
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Timetable */
+.timetable-wrapper {
+    overflow-x: auto;
+    margin-top: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--color-white);
+}
+
+.timetable__header th {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: #1C1C1C;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+}
+
+.timetable__header th:first-child {
+    border-top-left-radius: var(--radius-lg);
+}
+
+.timetable__header th:last-child {
+    border-top-right-radius: var(--radius-lg);
+}
+
+.timetable__body td {
+    padding: 12px 8px;
+    text-align: center;
+    border: 1px solid var(--color-gray-300);
+    transition: all var(--transition-base);
+}
+
+.timetable__body td:hover {
+    background-color: var(--color-gray-200);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.timetable__empty {
+    background: var(--color-gray-100);
+    color: #1C1C1C;
+    font-style: italic;
+}
+
+/* Time Cell */
+.time-cell {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-weight: 600;
+    color: #1C1C1C;
+    white-space: wrap;
+}
+
+/* Subject Cell */
+.subject-cell {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.subject-code {
+    font-weight: bold;
+    font-size: 1.25em; /* Increased font size */
+}
+
+.subject-name {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.05em;
+}
+
+.teacher-name {
+    font-size: 0.75em; /* teacher name now smaller */
+    color: #1C1C1C;
+    display: block;
+}
+
+/* Subject Colors by Category - all use single fallback now */
+/* Main Subjects */
+.color-bm { background: var(--color-bm); }
+.color-bi { background: var(--color-bi); }
+.color-mt { background: var(--color-mt); }
+.color-sn { background: var(--color-sn); }
+
+/* Islamic Subjects */
+.color-ba { background: var(--color-ba); }
+.color-aq { background: var(--color-aq); }
+.color-im { background: var(--color-im); }
+.color-ta { background: var(--color-ta); }
+.color-fq { background: var(--color-fq); }
+.color-jw { background: var(--color-jw); }  
+
+
+
+
+
+/* Skills Subjects */
+.color-pj { background: var(--color-pj); }
+.color-psv { background: var(--color-psv); }
+.color-pmz { background: var(--color-pmz); }
+.color-ms { background: var(--color-ms); }
+
+/* Breaks & Prayer (kept dark + yellow text) */
+.rehat { 
+    background: var(--color-breaks);
+    color: var(--color-breaks-text);
+    font-weight: 700;
+}
+
+/* Nursery */
+.color-GR { background: var(--color-GR); }
+.color-PP { background: var(--color-PP); }
+.color-free { background: var(--color-free); }
+.color-daycare { background: var(--color-daycare); }
+
+/* Info Box */
+.info-box {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    border-radius: var(--radius-md);
+}
+
+.info-box__title {
+    color: #1C1C1C;
+    margin-bottom: var(--spacing-md);
+}
+
+.info-box__content {
+    color: #1C1C1C;
+    line-height: 1.6;
+}
+
+/* Loading and Error States */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-primary);
+}
+
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #d32f2f;
+    background: #ffebee;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-toast);
+}
+
+.toast-info { background: var(--color-primary); color: white; }
+.toast-error { background: #d32f2f; color: white; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header__title {
+        font-size: 1.8rem;
+    }
+    
+    .filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .timetable__body td,
+    .timetable__header th {
+        padding: 8px 4px;
+        font-size: 0.85rem;
+    }
+    
+    .container {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: var(--spacing-sm);
+    }
+    
+    .header__title {
+        font-size: 1.5rem;
+    }
+    
+    .filter-group__select {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    
+    /* Responsive Timetable */
+    .timetable-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #timetableTable {
+        min-width: 600px;
+    }
+    .timetable__header th,
+    .timetable__body td {
+        padding: 6px 4px;
+        font-size: 0.8rem;
+    }
+}

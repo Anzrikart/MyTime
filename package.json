@@ -1,0 +1,25 @@
+{
+  "name": "school-timetable-system",
+  "version": "1.0.0",
+  "description": "School Timetable Management System",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server --port=8000",
+    "lint": "eslint js/",
+    "format": "prettier --write \"**/*.{js,css,html}\""
+  },
+  "keywords": [
+    "school",
+    "timetable",
+    "education",
+    "schedule"
+  ],
+  "author": "Anzrikart",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0",
+    "live-server": "^1.2.2"
+  }
+}
