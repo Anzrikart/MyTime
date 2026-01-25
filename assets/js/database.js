@@ -14,25 +14,35 @@ const database = {
 		{ id: 1, name: "Sekolah Rendah Agama Olak Lempit", code: "SRAOL", address: "Kampung Sungai Lempit, 42700 Banting, Selangor" },
 		{ id: 2, name: "Sekolah Kebangsaan Olak Lempit", code: "SKOL", address: "Kampung Olak Lempit, 42700 Banting, Selangor" },
 		{ id: 3, name: "Sekolah Rendah Agama Intergrasi Sungai Manggis", code: "SRAISM", address: "Sungai Manggis, 42700 Banting, Selangor" },
-		{ id: 4, name: "Taska Suria Ar-Raudhah", code: "TASKA", address: "1, Jalan Suria 1a/12, Bandar Mahkota Banting, 42700 Banting, Selangor" }
+		{ id: 4, name: "Taska Suria Ar-Raudhah", code: "TASKA", address: "1, Jalan Suria 1a/12, Bandar Mahkota Banting, 42700 Banting, Selangor" },
+		{ id: 5, name: "Tadika Pintar Ar-Raudhah", code: "TADIKA", address: "Jalan Mahkota 2A/B, Kampung Sungai Manggis, 42700 Banting, Selangor" }
+
 	],
 	classes: [
 		{ id: 1, name: "3JM", schoolId: 1, gradeLevel: 3 },
 		{ id: 2, name: "3UUM", schoolId: 2, gradeLevel: 3 },
 		{ id: 3, name: "1B", schoolId: 3, gradeLevel: 1 },
-		{ id: 4, name: "Taska ", schoolId: 4, gradeLevel: 0 }
+		{ id: 4, name: "Taska ", schoolId: 4, gradeLevel: 0 },
+		{ id: 5, name: "4UUM", schoolId: 2, gradeLevel: 4 },
+		{ id: 6, name: "4JF ", schoolId: 1, gradeLevel: 4 },
+		{ id: 7, name: "2AB", schoolId: 3, gradeLevel: 2 },
+		{ id: 8, name: "Tadika ", schoolId: 5, gradeLevel: 0 }
 	],
 	enrollments: [
 		{ userId: 1, classId: 1 }, // Syahmi in 3 JM
 		{ userId: 1, classId: 2 }, // Syahmi in 3 UUM
 		{ userId: 2, classId: 3 }, // Auni in 1 Al-Biruni
-		{ userId: 3, classId: 4 }  // Lutfi in Taska
+		{ userId: 3, classId: 4 },  // Lutfi in Taska
+		{ userId: 1, classId: 5 }, // Syahmi in 4 JM
+		{ userId: 1, classId: 6 }, // Syahmi in 4 UUM
+		{ userId: 2, classId: 7 }, // Auni in 2 Al-Biruni
+		{ userId: 3, classId: 8 }  // Lutfi in Tadika
 	],
 
 	// Unified category definitions
 	subjectCategories: {
-		MAIN: ['BM', 'BI', 'MT', 'SN'],           // Core subjects
-		ISLAMIC: ['AQ', 'AK', 'HF', 'FQ', 'TA', 'SR', 'TAJ', 'PIM', 'BAJ', 'BAS', 'IM', 'JW', 'KH'], // Islamic subjects
+		MAIN: ['BM', 'BI', 'MT', 'SN', 'SJ'],           // Core subjects
+		ISLAMIC: ['AQ', 'AK', 'HF', 'FQ', 'TA', 'SR', 'TAJ', 'PIM', 'BAJ', 'BAS', 'IM', 'JW', 'KH', 'RBT', 'PKP'], // Islamic subjects
 		SKILLS: ['PJ', 'PSV', 'PMz', 'MS'], // Skills & Arts
 		BREAKS: ['R', 'E', 'H', 'A', 'T', 'P', 'CP', 'ZOHOR', 'DHUHA'], // Breaks & Prayer
 		NURSERY: ['GR', 'PP', 'FREE', 'Daycare']  // Nursery activities
@@ -45,6 +55,7 @@ const database = {
 		"BI": { name: "Bahasa Inggeris", category: "MAIN" },
 		"MT": { name: "Matematik", category: "MAIN" },
 		"SN": { name: "Sains", category: "MAIN" },
+		"SJ": { name: "Sejarah", category: "MAIN" },
 		
 		// Islamic Subjects
 		"AQ": { name: "Al-Quran", category: "ISLAMIC" },
@@ -57,6 +68,8 @@ const database = {
 		"BAJ": { name: "Bahasa Arab JAIS", category: "ISLAMIC" },
 		"BAS": { name: "Bahasa Arab KSSR", category: "ISLAMIC" },
 		"JW": { name: "Jawi", category: "ISLAMIC" },
+		"RBT": { name: "Jawi", category: "ISLAMIC" },
+		"PKP": { name: "Jawi", category: "ISLAMIC" },
 		
 		// Skills & Arts
 		"PJ": { name: "Pendidikan Jasmani", category: "SKILLS" },
@@ -77,7 +90,13 @@ const database = {
 		"GR": { name: "Baju Hijau", category: "NURSERY" },
 		"PP": { name: "Baju Purple", category: "NURSERY" },
 		"FREE": { name: "Free Time", category: "NURSERY" },
-		"Daycare": { name: "Daycare", category: "NURSERY" }
+		"Daycare": { name: "Daycare", category: "NURSERY" },
+
+			// TADIKA Activities
+		"Uniform": { name: "Baju Kotak", category: "TADIKA" },
+		"Sport": { name: "Baju Sukan", category: "TADIKA" },
+		"FREE": { name: "Free Time", category: "TADIKA" },
+		"Daycare": { name: "Daycare", category: "TADIKA" }
 	},
 
 	// Complete class assignments
@@ -115,7 +134,12 @@ const database = {
 		// Class 4 (Taska)
 		{ classId: 4, subjectCode: "GR", teacherCode: "YUS" },
 		{ classId: 4, subjectCode: "PP", teacherCode: "YUS" },
-		{ classId: 4, subjectCode: "FREE", teacherCode: "YUS" }
+		{ classId: 4, subjectCode: "FREE", teacherCode: "YUS" },
+
+		// Class 5 (TADIKA)
+		{ classId: 5, subjectCode: "Unifoem", teacherCode: "YUS" },
+		{ classId: 5, subjectCode: "Sport", teacherCode: "YUS" },
+		{ classId: 5, subjectCode: "DAYCARE", teacherCode: "YUS" }
 	],
 
 	timetables: {
@@ -163,7 +187,45 @@ const database = {
 		4: [ // Taska
 			{ time: "08:00 - 10:00", mon: {code: "GR", teacherCode: "Yus"}, tue: {code: "PP", teacherCode: "Yus"}, wed: {code: "GR", teacherCode: "Yus"}, thu: {code: "PP", teacherCode: "Yus"}, fri: {code: "FREE", teacherCode: "Yus"} },
 			{ time: "11:00 - 18:00", mon: {code: "Daycare", teacherCode: ""}, tue: {code: "Daycare", teacherCode: ""}, wed: {code: "Daycare", teacherCode: ""}, thu: {code: "Daycare", teacherCode: ""}, fri: {code: "Daycare", teacherCode: ""} }
-		]
+		],
+		5: [
+	{ time: "12:50 - 13:20", mon: {code: "P", teacherCode: "MHASBULLAH.ZA"}, tue: {code: "BM", teacherCode: "MHASBULLAH.ZA"}, wed: {code: "PI(J)", teacherCode: "NURSAADAH.B"}, thu: {code: "J4B", teacherCode: "NSAADAH"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "13:20 - 13:50", mon: {code: "BM", teacherCode: "MHASBULLAH.ZA"}, tue: {code: "Mt", teacherCode: "NORAZEAN.D"}, wed: {code: "BM", teacherCode: "MHASBULLAH.ZA"}, thu: {code: "Sn", teacherCode: "SARMINAH.M"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "13:50 - 14:20", mon: {code: "PI(U)", teacherCode: "NURSAADAH.B"}, tue: {code: "BI", teacherCode: "ISAACN.J"}, wed: {code: "BM", teacherCode: "MHASBULLAH.ZA"}, thu: {code: "PKP", teacherCode: "ARAHMAN.S"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "14:20 - 14:50", mon: {code: "PMz", teacherCode: "MFAZMIRULA.M"}, tue: {code: "Mt", teacherCode: "NORAZEAN.D"}, wed: {code: "BI", teacherCode: "ISAACN.J"}, thu: {code: "PK", teacherCode: "ARAHMAN.S"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "14:50 - 15:10", mon: {code: "R", teacherCode: ""}, tue: {code: "R", teacherCode: ""}, wed: {code: "R", teacherCode: ""}, thu: {code: "R", teacherCode: ""}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "15:10 - 15:40", mon: {code: "BI", teacherCode: "ISAACN.J"}, tue: {code: "BI", teacherCode: "ISAACN.J"}, wed: {code: "Mt", teacherCode: "NORAZEAN.D"}, thu: {code: "RBT", teacherCode: "MHASBULLAH.ZA"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "15:40 - 16:10", mon: {code: "BA", teacherCode: "FUZIAHR.A"}, tue: {code: "PSV", teacherCode: "FARAE.MS"}, wed: {code: "BI", teacherCode: "ISAACN.J"}, thu: {code: "Sn", teacherCode: "SARMINAH.M"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "16:10 - 16:40", mon: {code: "Sj", teacherCode: "NORAZEAN.D"}, tue: {code: "PSV", teacherCode: "FARAE.MS"}, wed: {code: "Mt", teacherCode: "NORAZEAN.D"}, thu: {code: "PKP", teacherCode: "ARAHMAN.S"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "16:40 - 17:10", mon: {code: "BM", teacherCode: "MHASBULLAH.ZA"}, tue: {code: "PI(AQ)", teacherCode: "NURSAADAH.B"}, wed: {code: "BI", teacherCode: "ISAACN.J"}, thu: {code: "PJ", teacherCode: "ARAHMAN.S"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "17:10 - 17:40", mon: {code: "BI", teacherCode: "ISAACN.J"}, tue: {code: "PI(AQ)", teacherCode: "SAZIZAH.S"}, wed: {code: "PJ", teacherCode: "ARAHMAN.S"}, thu: {code: "BA", teacherCode: "FUZIAHR.A"}, fri: {code: "", teacherCode: ""} },
+	
+	{ time: "17:40 - 18:10", mon: {code: "Mt", teacherCode: "NORAZEAN.D"}, tue: {code: "PI(AQ)", teacherCode: "NURSAADAH.B"}, wed: {code: "BA", teacherCode: "FUZIAHR.A"}, thu: {code: "Tas", teacherCode: "SDNADIA.MP"}, fri: {code: "", teacherCode: ""} }
+],
+		6: [
+	{ time: "08:00 - 08:30", mon: {code: "AQ", teacherCode: "DIRA"}, tue: {code: "JW", teacherCode: "SYAKIRA"}, wed: {code: "TJ", teacherCode: "DIRA"}, thu: {code: "SR", teacherCode: "SUE"}, fri: {code: "KT", teacherCode: "SYAKIRA"} },
+	
+	{ time: "08:30 - 09:00", mon: {code: "AQ", teacherCode: "DIRA"}, tue: {code: "SR", teacherCode: "SUE"}, wed: {code: "AQ", teacherCode: "DIRA"}, thu: {code: "IM", teacherCode: "SYAKIRA"}, fri: {code: "FQ", teacherCode: "ZUL"} },
+	
+	{ time: "09:00 - 09:30", mon: {code: "TF", teacherCode: "ZUL"}, tue: {code: "TJ", teacherCode: "DIRA"}, wed: {code: "BA", teacherCode: "MADHAH"}, thu: {code: "TF", teacherCode: "ZUL"}, fri: {code: "FQ", teacherCode: "ZUL"} },
+	
+	{ time: "09:30 - 10:00", mon: {code: "AS", teacherCode: "SUE"}, tue: {code: "TJ", teacherCode: "DIRA"}, wed: {code: "HF", teacherCode: "ZUL"}, thu: {code: "BA", teacherCode: "MADHAH"}, fri: {code: "AS", teacherCode: "SUE"} },
+	
+	{ time: "10:00 - 10:20", mon: {code: "R", teacherCode: ""}, tue: {code: "R", teacherCode: ""}, wed: {code: "R", teacherCode: ""}, thu: {code: "R", teacherCode: ""}, fri: {code: "R", teacherCode: ""} },
+	
+	{ time: "10:20 - 10:50", mon: {code: "", teacherCode: ""}, tue: {code: "FQ", teacherCode: "ZUL"}, wed: {code: "HF", teacherCode: "ZUL"}, thu: {code: "FQ", teacherCode: "ZUL"}, fri: {code: "AS", teacherCode: "SUE"} },
+	
+	{ time: "10:50 - 11:05", mon: {code: "", teacherCode: ""}, tue: {code: "", teacherCode: ""}, wed: {code: "", teacherCode: ""}, thu: {code: "", teacherCode: ""}, fri: {code: "", teacherCode: ""} }
+]
 	},
 
 
