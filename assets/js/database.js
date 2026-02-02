@@ -22,37 +22,23 @@ const database = {
             id: 1,
             name: "Sekolah Rendah Agama Olak Lempit",
             code: "SRAOL",
-            address: "Kampung Sungai Lempit, 42700 Banting, Selangor",
-            logo: "assets/images/logos/sraol.png"
-        },
-        {
+            address: "Kampung Sungai Lempit, 42700 Banting, Selangor"
+        }, {
             id: 2,
             name: "Sekolah Kebangsaan Olak Lempit",
             code: "SKOL",
-            address: "Kampung Olak Lempit, 42700 Banting, Selangor",
-            logo: "assets/images/logos/skol.png"
-        },
-        {
+            address: "Kampung Olak Lempit, 42700 Banting, Selangor"
+        }, {
             id: 3,
             name: "Sekolah Rendah Agama Intergrasi Sungai Manggis",
             code: "SRAISM",
-            address: "Sungai Manggis, 42700 Banting, Selangor",
-            logo: "assets/images/logos/sraism.png"
-        },
-        {
+            address: "Sungai Manggis, 42700 Banting, Selangor"
+        }, {
             id: 4,
             name: "Taska Suria Ar-Raudhah",
             code: "TASKA",
-            address: "1, Jalan Suria 1a/12, Bandar Mahkota Banting, 42700 Banting, Selangor",
-            logo: "assets/images/logos/taska.png"
-        }, {
-            id: 5,
-            name: "Tadika Pintar Ar-Raudhah",
-            code: "TADIKA",
-            address: "Jalan Mahkota 2A/B, Kampung Sungai Manggis, 42700 Banting, Selangor",
-            logo: "assets/images/logos/tadika.png"
+            address: "1, Jalan Suria 1a/12, Bandar Mahkota Banting, 42700 Banting, Selangor"
         }
-
     ],
     classes: [
         {
@@ -60,43 +46,20 @@ const database = {
             name: "3JM",
             schoolId: 1,
             gradeLevel: 3
-        },
-        {
+        }, {
             id: 2,
             name: "3UUM",
             schoolId: 2,
             gradeLevel: 3
-        },
-        {
+        }, {
             id: 3,
             name: "1B",
             schoolId: 3,
             gradeLevel: 1
-        },
-        {
+        }, {
             id: 4,
-            name: "Taska",
+            name: "Taska ",
             schoolId: 4,
-            gradeLevel: 0
-        }, {
-            id: 5,
-            name: "4UUM",
-            schoolId: 2,
-            gradeLevel: 4
-        }, {
-            id: 6,
-            name: "4JF",
-            schoolId: 1,
-            gradeLevel: 4
-        }, {
-            id: 7,
-            name: "2B",
-            schoolId: 3,
-            gradeLevel: 2
-        }, {
-            id: 8,
-            name: "Tadika",
-            schoolId: 5,
             gradeLevel: 0
         }
     ],
@@ -104,41 +67,22 @@ const database = {
         {
             userId: 1,
             classId: 1
-        },
-        { // Syahmi in 3 JM
+        }, { // Syahmi in 3 JM
             userId: 1,
             classId: 2
-        },
-        { // Syahmi in 3 UUM
+        }, { // Syahmi in 3 UUM
             userId: 2,
             classId: 3
-        },
-        { // Auni in 1 Al-Biruni
+        }, { // Auni in 1 Al-Biruni
             userId: 3,
             classId: 4
-        }, { // Lutfi in Taska
-            userId: 1,
-            classId: 5
-        }, { // Syahmi in 4 JM
-            userId: 1,
-            classId: 6
-        }, { // Syahmi in 4 UUM
-            userId: 2,
-            classId: 7
-        }, { // Auni in 2 Al-Biruni
-            userId: 3,
-            classId: 8
-        } // Lutfi in Tadika
+        } // Lutfi in Taska
     ],
 
     // Unified category definitions
     subjectCategories: {
         MAIN: [
-            'BM',
-            'BI',
-            'MT',
-            'SN',
-            'SJ'
+            'BM', 'BI', 'MT', 'SN'
         ], // Core subjects
         ISLAMIC: [
             'AQ',
@@ -153,8 +97,7 @@ const database = {
             'BAS',
             'IM',
             'JW',
-            'KH',
-            'RBT'
+            'KH'
         ], // Islamic subjects
         SKILLS: [
             'PJ', 'PSV', 'PMz', 'MS'
@@ -170,10 +113,7 @@ const database = {
             'ZOHOR',
             'DHUHA'
         ], // Breaks & Prayer
-        NURSERY: [
-            'GR', 'PP', 'FREE', 'Daycare'
-        ], // Nursery activities
-        TADIKA: ['Uniform', 'Sport'] // Tadika activities
+        NURSERY: ['GR', 'PP', 'FREE', 'Daycare'] // Nursery activities
     },
 
     // Complete subject definitions
@@ -193,10 +133,6 @@ const database = {
         },
         "SN": {
             name: "Sains",
-            category: "MAIN"
-        },
-        "SJ": {
-            name: "Sejarah",
             category: "MAIN"
         },
 
@@ -239,54 +175,6 @@ const database = {
         },
         "JW": {
             name: "Jawi",
-            category: "ISLAMIC"
-        },
-        "RBT": {
-            name: "Reka Bentuk Teknologi",
-            category: "SKILLS"
-        },
-        "IM": {
-            name: "Ibadah Muamalat",
-            category: "ISLAMIC"
-        },
-        "SR": {
-            name: "Sirah",
-            category: "ISLAMIC"
-        },
-        "KH": {
-            name: "Khat",
-            category: "ISLAMIC"
-        },
-        "TF": {
-            name: "Tafsir",
-            category: "ISLAMIC"
-        },
-        "TJ": {
-            name: "Tajwid",
-            category: "ISLAMIC"
-        },
-        "AS": {
-            name: "Akidah Sirah",
-            category: "ISLAMIC"
-        },
-        "KT": {
-            name: "Khat",
-            category: "ISLAMIC"
-        },
-        "PK": {
-            name: "Pendidikan Kesihatan",
-            category: "SKILLS"
-        },
-        "TAS": {
-            name: "Tasawwur",
-            category: "ISLAMIC"
-        },
-        "AT": {
-            name: "Adab Tauhid",
-            category: "ISLAMIC"
-        },
-        "PI": {
-            name: "Pendidikan Islam",
             category: "ISLAMIC"
         },
 
@@ -354,16 +242,6 @@ const database = {
         "Daycare": {
             name: "Daycare",
             category: "NURSERY"
-        },
-
-        // TADIKA Activities
-        "Uniform": {
-            name: "Baju Kotak",
-            category: "TADIKA"
-        },
-        "Sport": {
-            name: "Baju Sukan",
-            category: "TADIKA"
         }
     },
 
@@ -489,21 +367,6 @@ const database = {
         }, {
             classId: 4,
             subjectCode: "FREE",
-            teacherCode: "YUS"
-        },
-
-        // Class 5 (TADIKA)
-        {
-            classId: 5,
-            subjectCode: "Uniform",
-            teacherCode: "YUS"
-        }, {
-            classId: 5,
-            subjectCode: "Sport",
-            teacherCode: "YUS"
-        }, {
-            classId: 5,
-            subjectCode: "DAYCARE",
             teacherCode: "YUS"
         }
     ],
@@ -1009,7 +872,7 @@ const database = {
                     teacherCode: "IDA"
                 },
                 fri: {
-                    code: "MT",
+                    code: "MT ",
                     teacherCode: "HUSNA"
                 }
             }, {
@@ -1326,846 +1189,12 @@ const database = {
                     teacherCode: ""
                 }
             }
-        ],
-        5: [
-            {
-                // 4 UUM at SKOL
-                time: "12:50 - 13:20",
-                mon: {
-                    code: "P",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                tue: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                wed: {
-                    code: "SJ",
-                    teacherCode: "NORAZEAN.D"
-                },
-                thu: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            },
-            {
-                time: "13:20 - 13:50",
-                mon: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                tue: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                wed: {
-                    code: "SJ",
-                    teacherCode: "NORAZEAN.D"
-                },
-                thu: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            },
-            {
-                time: "13:50 - 14:20",
-                mon: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                tue: {
-                    code: "MT",
-                    teacherCode: "NORAZEAN.D"
-                },
-                wed: {
-                    code: "BA",
-                    teacherCode: "FUZIAHR.A"
-                },
-                thu: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            },
-            {
-                time: "14:20 - 14:50",
-                mon: {
-                    code: "PI(J)",
-                    teacherCode: "NURSAADAH.B"
-                },
-                tue: {
-                    code: "MT",
-                    teacherCode: "NORAZEAN.D"
-                },
-                wed: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                thu: {
-                    code: "PSV",
-                    teacherCode: "FARAE.MS"
-                },
-                fri: {
-                    code: "PI(AQ)",
-                    teacherCode: "NURSAADAH.B / SAZIZAH.S"
-                }
-            }, {
-                time: "14:50 - 15:10",
-                mon: {
-                    code: "R",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "E",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "H",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "A",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "T",
-                    teacherCode: ""
-                }
-            }, {
-                time: "15:10 - 15:40",
-                mon: {
-                    code: "PK",
-                    teacherCode: "ARAHMAN.S"
-                },
-                tue: {
-                    code: "MT",
-                    teacherCode: "NORAZEAN.D"
-                },
-                wed: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                thu: {
-                    code: "PSV",
-                    teacherCode: "FARAE.MS"
-                },
-                fri: {
-                    code: "PI(AQ)",
-                    teacherCode: "NURSAADAH.B / SAZIZAH.S"
-                }
-            }, {
-                time: "15:40 - 16:10",
-                mon: {
-                    code: "TAS",
-                    teacherCode: "NURSAADAH.B / SDNADIA.MP"
-                },
-                tue: {
-                    code: "PI(U)",
-                    teacherCode: "NURSAADAH.B"
-                },
-                wed: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                thu: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                fri: {
-                    code: "PI(AQ)",
-                    teacherCode: "NURSAADAH.B / SAZIZAH.S"
-                }
-            }, {
-                time: "16:10 - 16:40",
-                mon: {
-                    code: "SN",
-                    teacherCode: "PKP"
-                },
-                tue: {
-                    code: "PI(U)",
-                    teacherCode: "NURSAADAH.B"
-                },
-                wed: {
-                    code: "MT",
-                    teacherCode: "NORAZEAN.D"
-                },
-                thu: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                fri: {
-                    code: "BA",
-                    teacherCode: "FUZIAHR.A"
-                }
-            }, {
-                time: "16:40 - 17:10",
-                mon: {
-                    code: "SN",
-                    teacherCode: "PKP"
-                },
-                tue: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                wed: {
-                    code: "MT",
-                    teacherCode: "NORAZEAN.D"
-                },
-                thu: {
-                    code: "SN",
-                    teacherCode: "PKP"
-                },
-                fri: {
-                    code: "BA",
-                    teacherCode: "FUZIAHR.A"
-                }
-            }, {
-                time: "17:10 - 17:40",
-                mon: {
-                    code: "RBT",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                tue: {
-                    code: "BI",
-                    teacherCode: "ISAACN.J"
-                },
-                wed: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                thu: {
-                    code: "SN",
-                    teacherCode: "PKP"
-                },
-                fri: {
-                    code: "PJ",
-                    teacherCode: "ARAHMAN.S"
-                }
-            }, {
-                time: "17:40 - 18:10",
-                mon: {
-                    code: "RBT",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                tue: {
-                    code: "PMz",
-                    teacherCode: "MFAZMIRULA.M"
-                },
-                wed: {
-                    code: "BM",
-                    teacherCode: "MHASBULLAH.ZA"
-                },
-                thu: {
-                    code: "PJ",
-                    teacherCode: "ARAHMAN.S"
-                },
-                fri: {
-                    code: "TAS",
-                    teacherCode: "NURSAADAH.B / SAZIZAH.S /WASYAFIQ.WA"
-                }
-            }
-        ],
-        6: [
-            {
-                // 4JF at SRAOL
-                time: "08:00 - 08:30",
-                mon: {
-                    code: "AQ",
-                    teacherCode: "DIRA"
-                },
-                tue: {
-                    code: "JW",
-                    teacherCode: "SYAKIRA"
-                },
-                wed: {
-                    code: "TJ",
-                    teacherCode: "DIRA"
-                },
-                thu: {
-                    code: "SR",
-                    teacherCode: "SUE"
-                },
-                fri: {
-                    code: "KT",
-                    teacherCode: "SYAKIRA"
-                }
-            },
-
-            {
-                time: "08:30 - 09:00",
-                mon: {
-                    code: "AQ",
-                    teacherCode: "DIRA"
-                },
-                tue: {
-                    code: "SR",
-                    teacherCode: "SUE"
-                },
-                wed: {
-                    code: "AQ",
-                    teacherCode: "DIRA"
-                },
-                thu: {
-                    code: "IM",
-                    teacherCode: "SYAKIRA"
-                },
-                fri: {
-                    code: "FQ",
-                    teacherCode: "ZUL"
-                }
-            },
-
-            {
-                time: "09:00 - 09:30",
-                mon: {
-                    code: "TF",
-                    teacherCode: "ZUL"
-                },
-                tue: {
-                    code: "TJ",
-                    teacherCode: "DIRA"
-                },
-                wed: {
-                    code: "BA",
-                    teacherCode: "MADHAH"
-                },
-                thu: {
-                    code: "TF",
-                    teacherCode: "ZUL"
-                },
-                fri: {
-                    code: "BA",
-                    teacherCode: "MADIHAH"
-                }
-            },
-
-            {
-                time: "09:30 - 10:00",
-                mon: {
-                    code: "AS",
-                    teacherCode: "SUE"
-                },
-                tue: {
-                    code: "TJ",
-                    teacherCode: "DIRA"
-                },
-                wed: {
-                    code: "HF",
-                    teacherCode: "ZUL"
-                },
-                thu: {
-                    code: "BA",
-                    teacherCode: "MADHAH"
-                },
-                fri: {
-                    code: "TF",
-                    teacherCode: "ZUL"
-                }
-            }, {
-                time: "10:00 - 10:20",
-                mon: {
-                    code: "R",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "E",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "H",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "A",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "T",
-                    teacherCode: ""
-                }
-            }, {
-                time: "10:20 - 10:50",
-                mon: {
-                    code: "",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "FQ",
-                    teacherCode: "ZUL"
-                },
-                wed: {
-                    code: "HF",
-                    teacherCode: "ZUL"
-                },
-                thu: {
-                    code: "FQ",
-                    teacherCode: "ZUL"
-                },
-                fri: {
-                    code: "AS",
-                    teacherCode: "SUE"
-                }
-            }, {
-                time: "10:50 - 11:05",
-                mon: {
-                    code: "",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }
-        ],
-        8: [
-            {
-                // Tadika
-                time: "08:00 - 10:00",
-                mon: {
-                    code: "Uniform",
-                    teacherCode: "Yus"
-                },
-                tue: {
-                    code: "Sport",
-                    teacherCode: "Yus"
-                },
-                wed: {
-                    code: "Uniform",
-                    teacherCode: "Yus"
-                },
-                thu: {
-                    code: "Sport",
-                    teacherCode: "Yus"
-                },
-                fri: {
-                    code: "Uniform",
-                    teacherCode: "Yus"
-                }
-            }, {
-                time: "11:00 - 18:00",
-                mon: {
-                    code: "Daycare",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "Daycare",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "Daycare",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "Daycare",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "Daycare",
-                    teacherCode: ""
-                }
-            }
-        ],
-        7: [
-            {
-                // 2B (2 Al-Biruni)
-                time: "07:30 - 08:00",
-                mon: {
-                    code: "AT",
-                    teacherCode: "AISHAH.J"
-                },
-                tue: {
-                    code: "AT",
-                    teacherCode: "AISHAH.J"
-                },
-                wed: {
-                    code: "AT",
-                    teacherCode: "AISHAH.J"
-                },
-                thu: {
-                    code: "AT",
-                    teacherCode: "AISHAH.J"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            },
-            {
-                time: "08:00 - 08:30",
-                mon: {
-                    code: "AT",
-                    teacherCode: "AISHAH.J"
-                },
-                tue: {
-                    code: "PJ",
-                    teacherCode: "ZAINAIF"
-                },
-                wed: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                },
-                thu: {
-                    code: "BAS",
-                    teacherCode: "FAIZAL"
-                },
-                fri: {
-                    code: "AT",
-                    teacherCode: "AISHAH.J"
-                }
-            },
-            {
-                time: "08:30 - 09:00",
-                mon: {
-                    code: "MT",
-                    teacherCode: "AISHAH.J"
-                },
-                tue: {
-                    code: "PJ",
-                    teacherCode: "ZAINAIF"
-                },
-                wed: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                thu: {
-                    code: "MT",
-                    teacherCode: "AISHAH.J"
-                },
-                fri: {
-                    code: "MS",
-                    teacherCode: "R.HUDA"
-                }
-            },
-            {
-                time: "09:00 - 09:30",
-                mon: {
-                    code: "MT",
-                    teacherCode: "AISHAH.J"
-                },
-                tue: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                },
-                wed: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                thu: {
-                    code: "MT",
-                    teacherCode: "AISHAH.J"
-                },
-                fri: {
-                    code: "MS",
-                    teacherCode: "R.HUDA"
-                }
-            }, {
-                time: "09:30 - 10:00",
-                mon: {
-                    code: "R",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "E",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "H",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "A",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "T",
-                    teacherCode: ""
-                }
-            }, {
-                time: "10:00 - 10:30",
-                mon: {
-                    code: "DHUHA",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "DHUHA",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "DHUHA",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "DHUHA",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "SN",
-                    teacherCode: "AIN"
-                }
-            }, {
-                time: "10:30 - 11:00",
-                mon: {
-                    code: "JW",
-                    teacherCode: "HALIZA"
-                },
-                tue: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                wed: {
-                    code: "SN",
-                    teacherCode: "AINI"
-                },
-                thu: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                },
-                fri: {
-                    code: "PK",
-                    teacherCode: "ZAINAIF"
-                }
-            }, {
-                time: "11:00 - 11:30",
-                mon: {
-                    code: "HF",
-                    teacherCode: "N.HUDA"
-                },
-                tue: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                wed: {
-                    code: "SN",
-                    teacherCode: "AINI"
-                },
-                thu: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                },
-                fri: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                }
-            }, {
-                time: "11:30 - 12:00",
-                mon: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                },
-                tue: {
-                    code: "MT",
-                    teacherCode: "AISHAH.J"
-                },
-                wed: {
-                    code: "BAJ",
-                    teacherCode: "FAUZIAH"
-                },
-                thu: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                fri: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                }
-            }, {
-                time: "12:00 - 12:30",
-                mon: {
-                    code: "BI",
-                    teacherCode: "NORLELA"
-                },
-                tue: {
-                    code: "MT",
-                    teacherCode: "AISHAH.J"
-                },
-                wed: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                thu: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }, {
-                time: "12:30 - 13:00",
-                mon: {
-                    code: "R",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "E",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "H",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "A",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "T",
-                    teacherCode: ""
-                }
-            }, {
-                time: "13:00 - 13:30",
-                mon: {
-                    code: "PI",
-                    teacherCode: "FAIQAH"
-                },
-                tue: {
-                    code: "TA",
-                    teacherCode: "R.HUDA"
-                },
-                wed: {
-                    code: "JW",
-                    teacherCode: "HALIZA"
-                },
-                thu: {
-                    code: "BM",
-                    teacherCode: "ARLINA"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }, {
-                time: "13:30 - 14:00",
-                mon: {
-                    code: "TA",
-                    teacherCode: "R.HUDA"
-                },
-                tue: {
-                    code: "HF",
-                    teacherCode: "N.HUDA"
-                },
-                wed: {
-                    code: "JW",
-                    teacherCode: "HALIZA"
-                },
-                thu: {
-                    code: "AK",
-                    teacherCode: "AIN"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }, {
-                time: "14:00 - 14:30",
-                mon: {
-                    code: "ZOHOR",
-                    teacherCode: ""
-                },
-                tue: {
-                    code: "ZOHOR",
-                    teacherCode: ""
-                },
-                wed: {
-                    code: "ZOHOR",
-                    teacherCode: ""
-                },
-                thu: {
-                    code: "ZOHOR",
-                    teacherCode: ""
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }, {
-                time: "14:30 - 15:00",
-                mon: {
-                    code: "AK",
-                    teacherCode: "AIN"
-                },
-                tue: {
-                    code: "FQ",
-                    teacherCode: "AIN"
-                },
-                wed: {
-                    code: "FQ",
-                    teacherCode: "AIN"
-                },
-                thu: {
-                    code: "JW",
-                    teacherCode: "HALIZA"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }, {
-                time: "15:00 - 15:30",
-                mon: {
-                    code: "BAJ",
-                    teacherCode: "FAUZIAH"
-                },
-                tue: {
-                    code: "PI",
-                    teacherCode: "FAIQAH"
-                },
-                wed: {
-                    code: "FQ",
-                    teacherCode: "AIN"
-                },
-                thu: {
-                    code: "JW",
-                    teacherCode: "HALIZA"
-                },
-                fri: {
-                    code: "",
-                    teacherCode: ""
-                }
-            }
-
         ]
     },
 
-    /**
-     * Normalize subject code to uppercase and trim whitespace
-     * @param {string} code - The subject code to normalize
-     * @returns {string} Normalized subject code
-     */
-    normalizeSubjectCode(code) {
-        if (!code || typeof code !== 'string') {
-            return '';
-        }
-        return code.trim().toUpperCase();
-    },
 
-    /**
-     * Validate timetable data and normalize subject codes
-     */
-    validateTimetableData() {
+    // Validate timetable data
+    validateTimetableData: () => {
         Object.entries(database.timetables).forEach(([classId, timetable]) => {
             timetable.forEach(slot => {
                 [
@@ -2181,96 +1210,6 @@ const database = {
                 });
             });
         });
-    },
-
-    // Lookup maps for O(1) access
-    _classMap: null,
-    _schoolMap: null,
-    _userMap: null,
-    _subjectMap: null,
-
-    /**
-     * Initialize lookup maps for faster data access
-     */
-    initializeMaps() {
-        this._classMap = new Map(this.classes.map(c => [c.id, c]));
-        this._schoolMap = new Map(this.schools.map(s => [s.id, s]));
-        this._userMap = new Map(this.users.map(u => [u.id, u]));
-        this._subjectMap = new Map(Object.entries(this.subjects));
-    },
-
-    /**
-     * Get class by ID
-     * @param {number} id - Class ID
-     * @returns {Object|undefined} Class object or undefined
-     */
-    getClassById(id) {
-        if (!this._classMap) 
-            this.initializeMaps();
-        
-
-
-        return this._classMap.get(id);
-    },
-
-    /**
-     * Get school by ID
-     * @param {number} id - School ID
-     * @returns {Object|undefined} School object or undefined
-     */
-    getSchoolById(id) {
-        if (!this._schoolMap) 
-            this.initializeMaps();
-        
-
-
-        return this._schoolMap.get(id);
-    },
-
-    /**
-     * Get user by ID
-     * @param {number} id - User ID
-     * @returns {Object|undefined} User object or undefined
-     */
-    getUserById(id) {
-        if (!this._userMap) 
-            this.initializeMaps();
-        
-
-
-        return this._userMap.get(id);
-    },
-
-    /**
-     * Get subject by code
-     * @param {string} code - Subject code
-     * @returns {Object|undefined} Subject object or undefined
-     */
-    getSubjectByCode(code) {
-        if (!this._subjectMap) 
-            this.initializeMaps();
-        
-
-
-        return this._subjectMap.get(this.normalizeSubjectCode(code));
-    },
-
-    /**
-     * Get timetable by class ID
-     * @param {number} classId - Class ID
-     * @returns {Array|undefined} Timetable array or undefined
-     */
-    getTimetableByClassId(classId) {
-        return this.timetables[classId];
-    },
-
-    /**
-     * Get enrollments by user ID
-     * @param {number} userId - User ID
-     * @returns {Array} Array of enrollment objects
-     */
-    getEnrollmentsByUserId(userId) {
-        return this.enrollments.filter(e => e.userId === userId);
     }
 };
 
