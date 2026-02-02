@@ -1,74 +1,106 @@
-/* CSS Variables */
-:root {
-    /* Colors - Primary */
-    --color-primary: #667eea;
-    --color-primary-dark: #764ba2;
-    --color-primary-light: #a8b4f5;
-    
+/* CSS Variables */ : root { /* Colors - Primary */
+    --color - primary : #667eea;
+    --color - primary - dark : #764ba2;
+    --color - primary - light : #a8b4f5;
+
     /* Colors - Neutral */
-    --color-white: #ffffff;
-    --color-gray-100: #f9f9f9;
-    --color-gray-200: #f0f0f0;
-    --color-gray-300: #e0e0e0;
-    --color-gray-400: #ccc;
-    --color-gray-500: #999;
-    --color-gray-600: #666;
-    --color-gray-700: #555;
-    --color-gray-800: #333;
-    --color-gray-900: #2d3436;
+    --color - white : #ffffff;
+    --color - gray - 100 : #f9f9f9;
+    --color - gray - 200 : #f0f0f0;
+    --color - gray - 300 : #e0e0e0;
+    --color - gray - 400 : #ccc;
+    --color - gray - 500 : #999;
+    --color - gray - 600 : #666;
+    --color - gray - 700 : #555;
+    --color - gray - 800 : #333;
+    --color - gray - 900 : #2d3436;
 
-    /* Colors - Accent */
-    --color-bm: #ff9a9e; /* Pink gradient start */
-    --color-bi: #f8637e; /* Light peach gradient start */
-    --color-mt: #e3dd28; /* Light purple gradient start */
-    --color-sn: #a1c4fd; /* Light blue gradient start */
-    --color-ba: #2db850; /* Light pink gradient start */
-    --color-aq: #96fbc4; /* Mint green gradient start */    
-    --color-im: #8ac94c; /* Soft green gradient start */
-    --color-ta: #9bf98b; /* Light sky blue gradient start */    
-    --color-fq: #62a184; /* Light violet gradient start */
-    --color-jw: #73aa77; /* Light orange gradient start */                  
+    /* Colors - Subject Palette */
 
+    /* Main Subjects - Vibrant, distinct colors */
+    --color - bm : #FF6B6B;
+    --color - bi : #4ECDC4;
+    --color - mt : #FFE66D;
+    --color - sn : #95E1D3;
+    --color - sj : #C7CEEA;
 
+    /* Islamic Subjects - Green spectrum */
+    --color - aq : #38B000;
+    --color - ak : #8FBC8F;
+    --color - hf : #A8E6CF;
+    --color - fq : #56C596;
+    --color - ta : #7FCDCD;
+    --color - sr : #228B22;
+    --color - taj : #98D8C8;
+    --color - tj : #98D8C8;
+    --color - pim : #6B8E23;
+    --color - pi : #6B8E23;
+    --color - baj : #00A86B;
+    --color - bas : #01796F;
+    --color - ba : #2DB850;
+    --color - jw : #8A9A5B;
+    --color - kh : #4F7942;
+    --color - im : #00FF7F;
+    --color - tf : #40E0D0;
+    --color - as : #7FFFD4;
+    --color - kt : #2E8B57;
+    --color - tas : #00CED1;
+    --color - at : #008080;
 
+    /* Skills & Arts */
+    --color - pj : #FF9F1C;
+    --color - psv : #B565D8;
+    --color - pmz : #E056FD;
+    --color - ms : #FF69B4;
+    --color - rbt : #FFBF00;
+    --color - pk : #FFDAB9;
 
-    /* Breaks & Prayer - dark background with yellow text (kept) */
-    --color-breaks: #1c1c1c;
-    --color-breaks-text: #ffeb3b;
+    /* Breaks & Prayer */
+    --color - breaks : #1C1C1C;
+    --color - breaks - text : #FFD700;
 
-    /* Fallback single subject color (used for all non-break subjects) */
-    --color-other: #fffff
-    ;
+    /* Nursery */
+    --color - gr : #90EE90;
+    --color - pp : #DDA0DD;
+    --color - free : #FFFFE0;
+    --color - daycare : #ADD8E6;
+
+    /* Tadika */
+    --color - uniform : #F08080;
+    --color - sport : #FFA07A;
+
+    /* Fallback */
+    --color - other : #E8E8E8;
 
     /* Spacing */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    
+    --spacing - xs : 0.25 rem;
+    --spacing - sm : 0.5 rem;
+    --spacing - md : 1 rem;
+    --spacing - lg : 1.5 rem;
+    --spacing - xl : 2 rem;
+    --spacing - 2 xl : 3 rem;
+
     /* Border Radius */
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-xl: 20px;
-    
+    --radius - sm : 8 px;
+    --radius - md : 12 px;
+    --radius - lg : 16 px;
+    --radius - xl : 20 px;
+
     /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
-    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.3);
-    
+    --shadow - sm : 0 2 px 4 px rgba(0, 0, 0, 0.1);
+    --shadow - md : 0 4 px 8 px rgba(0, 0, 0, 0.1);
+    --shadow - lg : 0 8 px 16 px rgba(0, 0, 0, 0.15);
+    --shadow - xl : 0 20 px 60 px rgba(0, 0, 0, 0.3);
+
     /* Transitions */
-    --transition-fast: 150ms ease;
-    --transition-base: 300ms ease;
-    --transition-slow: 500ms ease;
-    
+    --transition - fast : 150 ms ease;
+    --transition - base : 300 ms ease;
+    --transition - slow : 500 ms ease;
+
     /* Z-index */
-    --z-dropdown: 100;
-    --z-sticky: 200;
-    --z-fixed: 300;
-    --z-modal: 400;
-    --z-tooltip: 500;
+    --z - dropdown : 100;
+    --z - sticky : 200;
+    --z - fixed : 300;
+    --z - modal : 400;
+    --z - tooltip : 500;
 }

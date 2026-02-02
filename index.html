@@ -1,93 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="School Timetable Application">
-    <title>School Timetable</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🎓 Jadual Waktu Sekolah & Taska</h1>
-        </header>
-        
-        <section class="filters">
-            <div class="filter-group">
-                <label for="userSelect">👤 Pilih Pelajar:</label>
-                <select id="userSelect">
-                    <option value="">-- Pilih Pelajar --</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label for="schoolSelect">🏫 Pilih Sekolah:</label>
-                <select id="schoolSelect">
-                    <option value="">-- Pilih Sekolah --</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label for="classSelect">📚 Pilih Kelas:</label>
-                <select id="classSelect">
-                    <option value="">-- Pilih Kelas --</option>
-                </select>
-            </div>
-        </section>
-        
-        <main class="timetable-wrapper">
-            <div class="table-responsive">
-                <table id="timetableTable" class="table table-bordered table-striped w-100">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                        </tr>
-                    </thead>
-                    <tbody id="timetableBody">
-                        <tr>
-                            <td colspan="6" class="empty-cell">Please select a student, school, and class to view the timetable</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
-        
-        <aside class="info-box" id="infoBox" style="display: none;">
-            <h3>Class Information</h3>
-            <p id="classInfo"></p>
-        </aside>
-    </div>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="School Timetable Application">
+            <title>
+                MyTime - School Timetable < /title>
+                <link rel="stylesheet" href="assets/css/reset.css ">
+                <link rel="stylesheet" href="assets/css/variables.css">
+                <link rel="stylesheet" href="assets/css/styles.css">
+                </head>
+                    <body>
+                        <div
+                            class="app-container">
+                            <!-- Header with live date/time -- > <header class="header">
+                                <div class="header-content">
+                                    <div class="header-left">
+                                        <h1 class="app-title">MyTime</h1>
+                                        <p class="app-subtitle">School Timetable</p>
+                                    </div>
+                                    <div class="header-right">
+                                        <div class="live-clock">
+                                            <div class="clock-time" id="liveTime">--:--</div>
+                                            <div class="clock-date" id="liveDate">Loading...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            
+                            <!-- School Info with Logo -->
+                            <section class="school-info" id="schoolInfo" style="display: none;">
+                                <div class="school-card">
+                                    <img src="assets/images/logos/placeholder.png" alt="School Logo" class="school-logo" id="schoolLogo">
+                                    <div class="school-details">
+                                        <h2 class="school-name" id="schoolName">School Name</h2>
+                                        <p class="school-address" id="schoolAddress">School Address</p>
+                                    </div>
+                                </div>
+                            </section>
 
-    <script src="assets/js/config.js" defer></script>
-    <script src="assets/js/database.js" defer></script>
-    <script src="assets/js/api.js" defer></script>
-    <script src="assets/js/ui.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-    <script defer>
-document.addEventListener('DOMContentLoaded', function() {
-    const userSelect = document.getElementById('userSelect');
-    const schoolSelect = document.getElementById('schoolSelect');
-    const classSelect = document.getElementById('classSelect');
-    const tbody = document.getElementById('timetableBody');
-    const infoBox = document.getElementById('infoBox');
-    const classInfo = document.getElementById('classInfo');
+                            <!-- Filters -->
+                            <section class="filters-section">
+                                <div class="filter-card">
+                                    <label class="filter-label">Student</label>
+                                    <select id="userSelect" class="filter-select">
+                                        <option value="">Select Student</option>
+                                    </select>
+                                </div>
 
-    userSelect.addEventListener('change', updateSchools);
-    schoolSelect.addEventListener('change', updateClasses);
-    classSelect.addEventListener('change', loadTimetable);
+                                <div class="filter-card">
+                                    <label class="filter-label">School</label>
+                                    <select id="schoolSelect" class="filter-select">
+                                        <option value="">Select School</option>
+                                    </select>
+                                </div>
 
-    // Initialize
-    initializeDropdowns();
-});
-</script>
-</body>
-</html>
+                                <div class="filter-card">
+                                    <label class="filter-label">Class</label>
+                                    <select id="classSelect" class="filter-select">
+                                        <option value="">Select Class</option>
+                                    </select>
+                                </div>
+                            </section>
+
+                            <!-- Timetable -->
+                            <main class="timetable-section">
+                                <div class="timetable-container">
+                                    <table id="timetableTable" class="timetable">
+                                        <thead>
+                                            <tr>
+                                                <th class="time-header">Time</th>
+                                                <th>Monday</th>
+                                                <th>Tuesday</th>
+                                                <th>Wednesday</th>
+                                                <th>Thursday</th>
+                                                <th>Friday</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="timetableBody">
+                                            <tr>
+                                                <td colspan="6" class="empty-state">
+                                                    <div class="empty-content">
+                                                        <div class="empty-icon">📅</div>
+                                                        <p class="empty-text">Select a student, school, and class to view timetable</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </main>
+                        </div>
+
+                        <script src="assets/js/config.js" defer></script>
+                        <script src="assets/js/database.js" defer></script>
+                        <script src="assets/js/api.js" defer></script>
+                        <script src="assets/js/ui.js" defer></script>
+                        <script src="assets/js/main.js" defer></script>
+                        <script>
+                            // Live clock
+                            function updateClock() {
+                                const now = new Date();
+
+                                // Time
+                                const hours = String(now.getHours()).padStart(2, '0');
+                                const minutes = String(now.getMinutes()).padStart(2, '0');
+                                document.getElementById('liveTime').textContent = `${hours}:${minutes}`;
+
+                                // Date
+                                const options = {
+                                    weekday: 'long',
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                };
+                                const dateStr = now.toLocaleDateString('en-US', options);
+                                document.getElementById('liveDate').textContent = dateStr;
+                            }
+
+                            // Update school info display
+                            function updateSchoolDisplay(schoolId) {
+                                const schoolInfoSection = document.getElementById('schoolInfo');
+                                if (! schoolId) {
+                                    schoolInfoSection.style.display = 'none';
+                                    return;
+                                }
+
+                                const school = database.getSchoolById(parseInt(schoolId));
+                                if (school) {
+                                    document.getElementById('schoolName').textContent = school.name;
+                                    document.getElementById('schoolAddress').textContent = school.address;
+                                    document.getElementById('schoolLogo').src = school.logo || 'assets/images/logos/placeholder.png';
+                                    document.getElementById('schoolLogo').onerror = function () {
+                                        this.src = 'assets/images/logos/placeholder.png';
+                                    };
+                                    schoolInfoSection.style.display = 'block';
+                                }
+                            }
+
+                            // Update immediately and then every second
+                            updateClock();
+                            setInterval(updateClock, 1000);
+
+                            // Initialize dropdowns
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const userSelect = document.getElementById('userSelect');
+                                const schoolSelect = document.getElementById('schoolSelect');
+                                const classSelect = document.getElementById('classSelect');
+
+                                userSelect.addEventListener('change', updateSchools);
+                                schoolSelect.addEventListener('change', function () {
+                                    updateSchoolDisplay(this.value);
+                                    updateClasses();
+                                });
+                                classSelect.addEventListener('change', loadTimetable);
+
+                                initializeDropdowns();
+                            });
+                        </script>
+                    </body>
+                </html>
